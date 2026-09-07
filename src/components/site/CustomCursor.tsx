@@ -22,7 +22,7 @@ export function CustomCursor() {
       if (dot.current) dot.current.style.transform = `translate3d(${mx}px, ${my}px, 0) translate(-50%, -50%)`;
       const target = e.target as HTMLElement | null;
       const interactive = !!target?.closest("a, button, [data-cursor]");
-      if (ring.current) ring.current.dataset.active = interactive ? "true" : "false";
+      if (ring.current) ring.current.dataset["active"] = interactive ? "true" : "false";
     };
 
     const loop = () => {
